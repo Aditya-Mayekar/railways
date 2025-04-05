@@ -1,0 +1,17 @@
+package com.railway.user_service.service;
+
+import com.railway.user_service.dto.ResponseStructureDTO;
+import com.railway.user_service.dto.UserRequestDTO;
+import com.railway.user_service.dto.UserResponseDTO;
+
+import java.util.List;
+
+public interface IUserService {
+    public ResponseStructureDTO<UserResponseDTO> addUser(UserRequestDTO userRequestDTO);
+
+    public ResponseStructureDTO<List<UserResponseDTO>> getAllUsers();
+
+    public ResponseStructureDTO<UserResponseDTO> getUserByEmail(String email);
+
+    public ResponseStructureDTO<UserResponseDTO> getUserByUserName(String userName);
+}
